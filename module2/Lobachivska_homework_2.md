@@ -114,4 +114,6 @@ marta@DESKTOP-PCLVAGS:~/alkash$ sudo gpasswd -a senior sudo
 Adding user senior to group sudo
 marta@DESKTOP-PCLVAGS:~/alkash$ groups senior
 senior : senior sudo users
+marta@DESKTOP-PCLVAGS:~/alkash$ grep senior /etc/passwd
+senior:x:1003:1003:,,,:/home/senior:/bin/bash
 ```
