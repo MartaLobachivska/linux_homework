@@ -98,5 +98,20 @@ marta@DESKTOP-PCLVAGS:~/alkash$ umask 022
 ##Завдання4
 
 ```
-
+marta@DESKTOP-PCLVAGS:~/alkash$ sudo adduser senior
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for senior
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] Y
+marta@DESKTOP-PCLVAGS:~/alkash$ sudo gpasswd -a senior sudo
+Adding user senior to group sudo
+marta@DESKTOP-PCLVAGS:~/alkash$ groups senior
+senior : senior sudo users
 ```
