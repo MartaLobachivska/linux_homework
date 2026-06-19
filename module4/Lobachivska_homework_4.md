@@ -182,6 +182,82 @@ Jun 19 11:27:32 DESKTOP-PCLVAGS cron[2796]: (CRON) INFO (Skipping @reboot jobs -
 ##Завдання4
 
 ```
+marta@DESKTOP-PCLVAGS:~$ nano ~/myscript.sh
+
+У вікні редагування файлу:
+ #!/bin/bash
+while true; do
+        date >> /home/marta/date_log.txt
+        sleep 1
+done
+
+
+
+marta@DESKTOP-PCLVAGS: chmod +x ~/myscript.sh
+
+...
+
+
+marta@DESKTOP-PCLVAGS:~$ sudo systemctl start myscript
+
+marta@DESKTOP-PCLVAGS:~$ sudo systemctl status myscript --no-pager
+● myscript.service - My Date Logger Service
+     Loaded: loaded (/etc/systemd/system/myscript.service; disabled; preset: enabled)
+     Active: active (running) since Fri 2026-06-19 12:03:04 CEST; 14s ago
+ Invocation: 74e4fd32c61c41e2a29acd49cab69188
+   Main PID: 3433 (myscript.sh)
+      Tasks: 2 (limit: 38359)
+     Memory: 2.5M (peak: 3.4M)
+        CPU: 400ms
+     CGroup: /system.slice/myscript.service
+             ├─3433 /bin/bash /home/marta/myscript.sh
+             └─3467 sleep 1
+...
+
+marta@DESKTOP-PCLVAGS:~$ cat /home/marta/date_log.txt
+Fri Jun 19 12:03:04 CEST 2026
+Fri Jun 19 12:03:05 CEST 2026
+Fri Jun 19 12:03:06 CEST 2026
+Fri Jun 19 12:03:07 CEST 2026
+Fri Jun 19 12:03:09 CEST 2026
+Fri Jun 19 12:03:10 CEST 2026
+Fri Jun 19 12:03:11 CEST 2026
+Fri Jun 19 12:03:12 CEST 2026
+Fri Jun 19 12:03:13 CEST 2026
+Fri Jun 19 12:03:14 CEST 2026
+Fri Jun 19 12:03:15 CEST 2026
+Fri Jun 19 12:03:16 CEST 2026
+Fri Jun 19 12:03:17 CEST 2026
+Fri Jun 19 12:03:18 CEST 2026
+Fri Jun 19 12:03:19 CEST 2026
+Fri Jun 19 12:03:20 CEST 2026
+Fri Jun 19 12:03:21 CEST 2026
+Fri Jun 19 12:03:22 CEST 2026
+Fri Jun 19 12:03:23 CEST 2026
+Fri Jun 19 12:03:24 CEST 2026
+Fri Jun 19 12:03:25 CEST 2026
+Fri Jun 19 12:03:26 CEST 2026
+Fri Jun 19 12:03:27 CEST 2026
+Fri Jun 19 12:03:28 CEST 2026
+Fri Jun 19 12:03:29 CEST 2026
+Fri Jun 19 12:03:30 CEST 2026
+Fri Jun 19 12:03:31 CEST 2026
+Fri Jun 19 12:03:32 CEST 2026
+Fri Jun 19 12:03:33 CEST 2026
+Fri Jun 19 12:03:34 CEST 2026
+Fri Jun 19 12:03:35 CEST 2026
+Fri Jun 19 12:03:36 CEST 2026
+Fri Jun 19 12:03:37 CEST 2026
+Fri Jun 19 12:03:38 CEST 2026
+Fri Jun 19 12:03:39 CEST 2026
+Fri Jun 19 12:03:40 CEST 2026
+Fri Jun 19 12:03:41 CEST 2026
+Fri Jun 19 12:03:42 CEST 2026
+Fri Jun 19 12:03:43 CEST 2026
+Fri Jun 19 12:03:44 CEST 2026
+Fri Jun 19 12:03:45 CEST 2026
+Fri Jun 19 12:03:47 CEST 2026
+Fri Jun 19 12:03:48 CEST 2026
 
 ```
 
